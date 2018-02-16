@@ -1,0 +1,73 @@
+\documentclass[pdftex,12pt,titlepage,twoside,openright,a4paper,english]{book}
+
+\usepackage{configuration}
+
+%% THESIS INFORMATION
+\newcommand{\AuthorName}{My name}
+\newcommand{\ThesisTitle}{My title}
+\newcommand{\ThesisVolume}{}
+\newcommand{\FinishDate}{January of 2000}
+
+% COVER TEXT PARAMETERS:
+% Change each parameter or directly change the \ThesisInfo command
+\newcommand{\TypeOfThesis}{Master's Dissertation}
+\newcommand{\CourseDesignation}{MIEEC}
+\newcommand{\SupervisorName}{MySupervisor}
+\newcommand{\Faculty}{Faculty of Science and Technology}
+\newcommand{\College}{University of Coimbra}
+% OR
+\newcommand{\ThesisInfo}{%
+	\TypeOfThesis\ in \CourseDesignation, supervised by\\ \SupervisorName\ and presented to the\\ \Faculty\ of the \College}
+
+% MOORREEEEE INNNNNFO!
+\newcommand{\JuryNameI}{Jury1}
+\newcommand{\JuryNameII}{Jury2}
+\newcommand{\JuryNameIII}{Jury3}
+
+
+%%%%%%%%%%%%%%
+%% MAIN DOC
+\begin{document}
+\pagenumbering{roman}
+\pagestyle{empty}
+\input{C00-Informative/cover.tex}
+\input{C00-Informative/title1.tex}
+\input{C00-Informative/title2.tex}
+\input{C00-Informative/acknowledgements.tex}
+\input{C00-Informative/summary.tex}
+\input{C00-Informative/abstract.tex}
+
+\fullpagequote{Inspirational quotes are cool}{Renowned author}{A great book}
+
+\pagestyle{plain}
+\tableofcontents
+
+\input{C00-Informative/listofacronyms.tex}
+
+% LIST OF FIGURES
+\listoffigures
+
+% LIST OF TABLES
+\listoftables
+
+\newpage\null\thispagestyle{empty}\newpage
+\pagenumbering{arabic}
+
+%% THESIS BODY (Example)
+\input{C01-Introduction/introduction.tex}
+\input{C02-Background/background.tex}
+\input{C03-Methods/methods.tex}
+\input{C04-Results/results.tex}
+\input{C05-Discussion/discussion.tex}
+\input{C06-Conclusions/conclusions.tex}
+\input{C07-Recommendations/recommendations.tex}
+%
+
+
+
+\bibliographystyle{plain}
+\bibliography{C00-Informative/references}
+
+\input{C00-Informative/appendix.tex}
+
+\end{document}

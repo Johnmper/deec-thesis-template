@@ -1,0 +1,131 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%          ########     ###     ######  ##    ##    ###     ######   ########  ######          %%
+%%          ##     ##   ## ##   ##    ## ##   ##    ## ##   ##    ##  ##       ##    ##         %%
+%%          ##     ##  ##   ##  ##       ##  ##    ##   ##  ##        ##       ##               %%
+%%          ########  ##     ## ##       #####    ##     ## ##   #### ######    ######          %%
+%%          ##        ######### ##       ##  ##   ######### ##    ##  ##             ##         %%
+%%          ##        ##     ## ##    ## ##   ##  ##     ## ##    ##  ##       ##    ##         %%
+%%          ##        ##     ##  ######  ##    ## ##     ##  ######   ########  ######          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Project managment packages
+
+% Configuration of document layout
+\usepackage[left=2.5cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+
+\usepackage[toc,page]{appendix}
+
+% Permits individual compilation in a multi-file project (reduces compilation time)
+\usepackage{subfiles}
+
+% Resolves subfiles package problem with references
+\usepackage{xr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Font and language packages
+
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[gen]{eurosym}
+\usepackage{titlesec}
+\usepackage{setspace}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Graphics packages
+
+\usepackage{tikz}
+\usepackage{graphics}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{subcaption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Color packages
+
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{colortbl}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Reference Biblioo and external packages
+
+\usepackage{pdfpages}
+\usepackage{epigraph}
+\usepackage{url}
+\usepackage[nottoc,numbib]{tocbibind}
+\usepackage[
+      colorlinks=true,    			%no frame around URL
+      urlcolor=black,    			%no colors
+      menucolor=black,    			%no colors
+      linkcolor=black,    			%no colors
+      citecolor=black,    			%no colors
+      bookmarks=true,    			%tree-like TOC
+      bookmarksopen=true,    		%expanded when starting
+      bookmarksnumbered=true, 		%Put section numbers in bookmarks
+      hyperfootnotes=true,    		%no referencing of footnotes, does not compile
+      pdfpagemode=UseOutlines,    	%show the bookmarks when starting the pdf viewer
+      plainpages=false, 			%solve problem ``destination with the same identifier'' warning
+      pdfpagelabels				 	%solve problem ``destination with the same identifier'' warning
+]{hyperref}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Math packages
+
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{xparse}
+\usepackage{xfrac}
+\usepackage{cancel}
+\usepackage{array}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Table and others packages
+
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{enumitem}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                ##     ##    ###     ######  ########   #######   ######                      %%
+%%                ###   ###   ## ##   ##    ## ##     ## ##     ## ##    ##                     %%
+%%                #### ####  ##   ##  ##       ##     ## ##     ## ##                           %%
+%%                ## ### ## ##     ## ##       ########  ##     ##  ######                      %%
+%%                ##     ## ######### ##       ##   ##   ##     ##       ##                     %%
+%%                ##     ## ##     ## ##    ## ##    ##  ##     ## ##    ##                     %%
+%%                ##     ## ##     ##  ######  ##     ##  #######   ######                      %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Current Image Path
+\newcommand{\fpath}{C0-Informative/Images}
+
+% INSPIRATIONAL QUOTE
+% Setup
+\newcommand{\fullpagequote}[3]{
+	\newpage\null\thispagestyle{empty}\newpage
+	\setlength\epigraphwidth{12cm}
+	\setlength\epigraphrule{0pt}
+	% Actual Quote
+	\vspace*{\fill}
+	\epigraph{#1}
+	{--- \textup{#2}, #3}
+	\vspace*{\fill}
+	\newpage\null\thispagestyle{empty}\newpage
+}
+
+\setlength{\headheight}{16pt}
+
+\renewcommand{\baselinestretch}{1.5}	% 1.5 line spacing, as mandated by the rules
+
+\titleformat{\chapter}[hang] 			% Smaller chapter titles
+{\normalfont\huge\bfseries}{\thechapter}{1em}{}
