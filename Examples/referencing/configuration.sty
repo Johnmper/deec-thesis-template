@@ -15,6 +15,7 @@
 % Configuration of document layout
 \usepackage[left=2.5cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 
+
 \usepackage[toc,page]{appendix}
 
 % Permits individual compilation in a multi-file project (reduces compilation time)
@@ -28,21 +29,16 @@
 % 	Needed for subfiles to run correctly
 \usepackage{zref}
 
-% Usefull for finding current page type, odd or even (needed for \chapteinput command)
-\usepackage{ifthen,changepage}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Font and language packages
 
-\usepackage{babel}
+\usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage[gen]{eurosym}
 \usepackage{titlesec}
 \usepackage{setspace}
-
-\usepackage{blindtext}	% text generator for testing
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Graphics packages
@@ -115,9 +111,11 @@
 %%                ##     ## ##     ##  ######  ##     ##  #######   ######                      %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Current image folder path
 \newcommand{\fpath}{C0-Informative/Images}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Inspirational quote
@@ -143,11 +141,6 @@
 
 \titleformat{\chapter}[hang] 			% Smaller chapter titles
 {\normalfont\huge\bfseries}{\thechapter}{1em}{}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%
-
 
 
 

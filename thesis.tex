@@ -2,6 +2,11 @@
 
 \usepackage{configuration}
 
+% Compile whole project with the following line comment out
+% then chose which chapter you intend to focus with \includeonly
+%\includeonly{C00-Introduction/introduction}
+
+
 %% THESIS INFORMATION
 \newcommand{\AuthorName}{My name}
 \newcommand{\ThesisTitle}{My title}
@@ -28,21 +33,22 @@
 %%%%%%%%%%%%%%
 %% MAIN DOC
 \begin{document}
-\pagenumbering{roman}
-\pagestyle{empty}
-\input{C00-Informative/cover.tex}
-\input{C00-Informative/title1.tex}
-\input{C00-Informative/title2.tex}
-\input{C00-Informative/acknowledgements.tex}
-\input{C00-Informative/summary.tex}
-\input{C00-Informative/abstract.tex}
+
+\pagenumbering{roman}\pagestyle{empty}
+\include{C00-Informative/cover}
+\include{C00-Informative/title1}
+\include{C00-Informative/title2}
+\include{C00-Informative/acknowledgements}
+\include{C00-Informative/summary}
+\include{C00-Informative/abstract}
 
 \fullpagequote{Inspirational quotes are cool}{Renowned author}{A great book}
 
 \pagestyle{plain}
 \tableofcontents
 
-\input{C00-Informative/listofacronyms.tex}
+% LIST OF ACRONYMS
+\include{C00-Informative/listofacronyms}
 
 % LIST OF FIGURES
 \listoffigures
@@ -53,20 +59,22 @@
 \newpage\null\thispagestyle{empty}\newpage
 \pagenumbering{arabic}
 
+
+
 %% THESIS BODY (Example)
-\input{C01-Introduction/introduction.tex}
-\input{C02-Background/background.tex}
-\input{C03-Methods/methods.tex}
-\input{C04-Results/results.tex}
-\input{C05-Discussion/discussion.tex}
-\input{C06-Conclusions/conclusions.tex}
-\input{C07-Recommendations/recommendations.tex}
+\include{C01-Introduction/introduction}
+\include{C02-Background/background}
+\include{C03-Methods/methods}
+\include{C04-Results/results}
+\include{C05-Discussion/discussion}
+\include{C06-Conclusions/conclusions}
+\include{C07-Recommendations/recommendations}
 %
 
 
 
 \bibliographystyle{plain}
-\bibliography{C00-Informative/references}
+\bibliography{C00-Informative/bibliography}
 
 \input{C00-Informative/appendix.tex}
 

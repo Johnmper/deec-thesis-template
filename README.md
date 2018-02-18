@@ -1,49 +1,61 @@
-Thesis Project Structure (Example)
+# Thesis Template
+
+
+## Template Structure:
 
 ```
 LaThesis
-|
+====================
 \- thesis.tex
-\- C0-Informative
-|	\- summary.tex
+\- C00-Informative
+|	\- cover.tex
+|	\- title1.tex
+|	\- title2.tex
+|	\- summary.tex			
 |	\- abstract.tex
 |	\- listofacronyms.tex
+|	\- bibliography.bib
+|	\- appendix.tex
 |
-\- C1-Introduction
+\- C01-Introduction				
 |	\- introduction.tex
 |	\- Images
 |		\- img*.png
 |
-\- C2-Background
+\- C02-Background
 |	\- background.tex
 |	\- Images
 |		\- img*.png
 |
-\- C3-Methods
+\- C03-Methods
 |	\- methods.tex
 |	\- Images
 |		\- img*.png
 |
-\- C4-Results
+\- C04-Results
 |	\- results.tex
 |	\- Images
 |		\- img*.png
 |
-\- C5-Discussion
+\- C05-Discussion
 |	\- discussion.tex
 |	\- Images
 |		\- img*.png
 |
-\- C6-Conclusions
+\- C06-Conclusions
 |	\- conclusions.tex
 |	\- Images
 |		\- img*.png
 |
-\- C7-Recommendations
+\- C07-Recommendations
 |	\- recommendations.tex
 |	\- Images
 |		\- img*.png
-|
-\- references.bib
-\- appendix.tex
+
 ```
+
+## Notes:
+
+
+* Each chapter has its own **Figures** folder, reducing some image naming complexity.
+* Use *includeonly* to compile a single chapter without losing labels from the other chapters.
