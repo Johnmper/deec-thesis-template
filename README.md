@@ -1,5 +1,6 @@
 # Thesis Template
 
+Deprecated LaTeX thesis template for UC-DEEC
 
 ## Template Structure:
 
